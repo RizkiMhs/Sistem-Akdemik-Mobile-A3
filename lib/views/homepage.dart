@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/info/pesan.dart';
+import 'package:flutter_application_1/views/acl.dart';
+import 'package:flutter_application_1/views/profil.dart';
+
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
@@ -143,6 +147,7 @@ class _HomepageState extends State<Homepage> {
                 ],
               ),
             ),
+            // AutoSc(),
             const Align(
               alignment: Alignment.centerLeft,
               child: Padding(
@@ -1082,7 +1087,7 @@ class _HomepageState extends State<Homepage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Padding(
-                                padding: EdgeInsets.only(top: 10, left: 10),
+                                padding: EdgeInsets.only(top: 15, left: 10),
                                 child: Text(
                                   'Judul Pengumuman',
                                   style: TextStyle(
@@ -1171,8 +1176,8 @@ class _HomepageState extends State<Homepage> {
               children: <Widget>[
                 GestureDetector(
                   onTap: () {
-                    // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    //     builder: (BuildContext) => const Pesan()));
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (BuildContext) => const Pesan()));
                   },
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 5),
@@ -1189,9 +1194,15 @@ class _HomepageState extends State<Homepage> {
                   ),
                   child: Image.asset('asset/image/Home.png'),
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: 5),
-                  child: Image.asset('asset/image/Male User.png'),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (BuildContext) => const Profil()));
+                  },
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    child: Image.asset('asset/image/Male User.png'),
+                  ),
                 )
               ],
             ),

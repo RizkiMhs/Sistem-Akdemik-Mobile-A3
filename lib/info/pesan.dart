@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/color.dart';
-import 'package:flutter_application_1/views/home.dart';
+
+import 'package:flutter_application_1/views/homepage.dart';
 
 class Pesan extends StatefulWidget {
   const Pesan({super.key});
@@ -368,7 +369,7 @@ class _PesanState extends State<Pesan> {
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (BuildContext) => const Home()));
+                        builder: (BuildContext) => const Homepage()));
                   },
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 5),
